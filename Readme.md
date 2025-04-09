@@ -1,5 +1,5 @@
 -- 1. Создание пользователя
-CREATE USER test_user WITH PASSWORD 'secure_password';
+СREATE USER test_user WITH PASSWORD 'secure_password';
 
 -- 2. Выдача всех прав на базу данных store
 GRANT ALL PRIVILEGES ON DATABASE store TO test_user;
