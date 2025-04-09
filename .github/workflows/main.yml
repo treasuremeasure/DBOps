@@ -19,12 +19,12 @@ jobs:
          sudo ln -s $PWD/flyway-9.22.2/flyway /usr/local/bin/flyway
 
     - name: Run database migrations
-      run:
-         flyway \
-            --url=jdbc:postgresql://${{ secrets.DB_HOST }}:${{ secrets.DB_PORT }}/${{ secrets.DB_NAME }} \
-            --user=${{ secrets.DB_USER }} \
-            --password=${{ secrets.DB_PASSWORD }} \
-         migrate  
+      env:
+          FLYWAY_URL: jdbc:postgresql://${{ secrets.DB_HOST }}:${{ secrets.DB_PORT }}/${{ secrets.DB_NAME }}
+          FLYWAY_USER: ${{ secrets.DB_USER }}
+          FLYWAY_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      run: |
+        flyway migrate 
 
     ### Этот шаг оставьте без изменений
     - name: Download and setup autotests binaries
