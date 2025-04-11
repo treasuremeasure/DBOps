@@ -14,6 +14,8 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO test_user;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO test_user;
 
 
+-- SQL-запрос, который показывает, какое количество сосисок было продано за предыдущую неделю.
+
 SELECT
   o.date_created,
   SUM(op.quantity) AS total_sold
