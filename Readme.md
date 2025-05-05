@@ -14,13 +14,7 @@
 
 🛠️ Технологии
 
-Компонент	Технология
-Язык БД	PostgreSQL 16
-Миграции	Flyway 9.22
-CI/CD	GitHub Actions
-Контейнеризация	Docker Compose
-Хранилище данных	Volume в Docker
-Тесты	Binary-автотесты (dbopstest)
+PostgreSQL, Flyway 9.22, CI/CD, GitHub Actions, Docker Compose, Docker
 
 ⚙️ Структура проекта
 
